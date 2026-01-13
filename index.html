@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <link rel="stylesheet" href="style.css" />
+
+    <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joke App</title>
+</head>
+<body>
+<header>
+  <div class="logo" aria-hidden="true">😂</div>
+  <h1>Joke App – Glume Random</h1>
+</header>
+
+
+  <main>
+    <section aria-labelledby="joke-section-title">
+      <h2 id="joke-section-title">Gluma curentă</h2>
+
+      <article>
+        <h3>Întrebare (setup)</h3>
+        <p id="joke-setup">—</p>
+
+        <h3>Răspuns (punchline)</h3>
+        <p id="joke-punchline">—</p>
+      </article>
+
+      <section aria-labelledby="joke-details-title">
+        <h3 id="joke-details-title">Detalii glumă</h3>
+
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Câmp</th>
+              <th scope="col">Valoare</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">ID</th>
+              <td id="joke-id">—</td>
+            </tr>
+            <tr>
+              <th scope="row">Tip</th>
+              <td id="joke-type">—</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <div>
+        <button id="generate-joke-btn" type="button">Generează glumă</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Folosește Official Joke API pentru a genera glume.</p>
+  </footer>
+<script src="script.js"></script>
+</body>
+</html>
