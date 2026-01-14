@@ -43,9 +43,14 @@ function renderJoke(joke) {
 
   if (elements.setup) elements.setup.textContent = setup ?? "—";
   if (elements.punchline) elements.punchline.textContent = punchline ?? "—";
-  if (elements.id) elements.id.textContent = id ?? "—";
-  if (elements.type) elements.type.textContent = type ?? "—";
+
+  renderJokeDetails(id, type);
+
+  if (elements.status) {
+    elements.status.textContent = "Glumă încărcată cu succes 😄";
+  }
 }
+
 
 async function fetchRandomJoke() {
   console.log("[JokeApp] Cerere trimisă către API:", API_URL);
