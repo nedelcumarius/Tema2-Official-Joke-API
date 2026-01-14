@@ -10,6 +10,7 @@ const API_URL = "https://official-joke-api.appspot.com/random_joke";
 // DOM references
 const elements = {
   setup: document.getElementById("joke-setup"),
+  status: document.getElementById("status-text"),
   punchline: document.getElementById("joke-punchline"),
   id: document.getElementById("joke-id"),
   type: document.getElementById("joke-type"),
@@ -18,8 +19,15 @@ const elements = {
 
 function setLoading(isLoading) {
   if (!elements.button) return;
+
   elements.button.disabled = isLoading;
   elements.button.textContent = isLoading ? "Se încarcă..." : "Generează glumă";
+
+  if (elements.status) {
+    elements.status.textContent = isLoading
+      ? "Se încarcă gluma..."
+      : "Apasă pe buton pentru o glumă 😄";
+  }
 }
 
 function showError(message) {
