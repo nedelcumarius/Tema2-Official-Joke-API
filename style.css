@@ -1,0 +1,179 @@
+/* style.css */
+
+/* ---------
+   Reset + base
+--------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.6;
+  color: #111827; /* near-black */
+  background: #f3f4f6; /* light gray */
+}
+
+/* ---------
+   Layout
+--------- */
+header,
+footer {
+  text-align: center;
+  padding: 16px 20px;
+  color: #374151;
+}
+
+main {
+  min-height: calc(100vh - 128px);
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+/* Card container (based on your existing structure) */
+main > section {
+  width: min(760px, 100%);
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e7eb;
+}
+
+/* ---------
+   Typography
+--------- */
+h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  margin: 0 0 16px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+h3 {
+  margin: 18px 0 8px;
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #6b7280;
+}
+
+p {
+  margin: 0 0 8px;
+  color: #111827;
+}
+
+/* Joke content styling */
+#joke-setup,
+#joke-punchline {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-top: 6px;
+}
+
+#joke-setup {
+  font-weight: 600;
+}
+
+#joke-punchline {
+  margin-top: 10px;
+}
+
+/* ---------
+   Table
+--------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden; /* keeps rounded corners */
+}
+
+thead th {
+  text-align: left;
+  background: #f9fafb;
+  color: #374151;
+  font-size: 13px;
+  padding: 12px 14px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+tbody th,
+tbody td {
+  text-align: left;
+  padding: 12px 14px;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 14px;
+  vertical-align: top;
+}
+
+tbody tr:last-child th,
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* ---------
+   Button
+--------- */
+div > button#generate-joke-btn {
+  margin-top: 18px;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 12px;
+  background: #2563eb;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.25);
+}
+
+div > button#generate-joke-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 12px 22px rgba(37, 99, 235, 0.32);
+}
+
+div > button#generate-joke-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 14px rgba(37, 99, 235, 0.22);
+}
+
+div > button#generate-joke-btn:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.35);
+  outline-offset: 3px;
+}
+
+/* ---------
+   Footer
+--------- */
+footer p {
+  margin: 0;
+  font-size: 14px;
+  color: #6b7280;
+}
+header .logo{
+  font-size: 42px;
+  margin-bottom: 6px;
+}
