@@ -37,6 +37,11 @@ function showError(message) {
   if (elements.id) elements.id.textContent = "—";
   if (elements.type) elements.type.textContent = "—";
 }
+function renderJokeDetails(id, type) {
+  if (elements.id) elements.id.textContent = id ?? "—";
+  if (elements.type) elements.type.textContent = type ?? "—";
+}
+
 
 function renderJoke(joke) {
   const { setup, punchline, id, type } = joke;
